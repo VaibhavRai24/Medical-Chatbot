@@ -6,6 +6,5 @@ langchain
 langchain-pinecone
 langchain-google-genai
 sentence-transformers
-python-dotenv
 langchain_experimental
 pinecone[grpc]
