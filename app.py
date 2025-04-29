@@ -11,8 +11,11 @@ from src.prompt import *
 import os
 
 load_dotenv()
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+
+os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
 
 embeddings = download_embeddings()
